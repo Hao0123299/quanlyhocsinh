@@ -9,13 +9,13 @@
                     <div class="col-lg-12">
                         <section class="panel">
                             <header class="panel-heading">
-                                Thêm môn học
+                                Thêm quyền
                             </header>
                             <div class="panel-body">
                                 <div class="position-center">
                                     <form role="form">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Môn</label>
+                                            <label for="exampleInputEmail1">Quyền</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Môn học ">
                                         </div>
                                         <div class="form-group">

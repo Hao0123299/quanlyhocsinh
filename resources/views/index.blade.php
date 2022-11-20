@@ -81,7 +81,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Role</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="form_component.html">Quyền</a></li>
+                        <li><a href="{{URL::to('/danh-sach-quyen')}}">Danh sách các quyền</a></li>
+                        <li><a href="{{URL::to('/them-quyen')}}">Thêm quyền truy cập</a></li>
                     </ul>
                 </li>
                 {{--Học sinh--}}
@@ -117,6 +118,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{URL::to('/them-mon-hoc')}}">Thêm môn học</a></li>
                     </ul>
                 </li>
+                {{--Đăng ký thông tin giáo viên mới--}}
+{{--                <li class="sub-menu">--}}
+{{--                    <a href="javascript:;">--}}
+{{--                        <i class="fa fa-th"></i>--}}
+{{--                        <span>Đăng ký</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="sub">--}}
+{{--                        <li><a href="{{URL::to('/dang-ky-tai-khoan')}}">Đăng ký tài khoản </a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
         </div>
         <!-- sidebar menu end-->

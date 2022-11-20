@@ -10,6 +10,6 @@ class GiaoVienController extends Controller
         return view('giaoVien.danhSachGiaoVien');
     }
     public function them_giao_vien(){
-        return view('giaoVien.danhSachGiaoVien');
+        return view('giaoVien.themGiaoVien');
     }
 }
