@@ -11,22 +11,30 @@
                             <header class="panel-heading">
                                 Thêm môn học
                             </header>
+                            @php
+                                $message = Session::get('message');
+                                if($message){
+                                    echo '<span class="text-alert">'.$message.'</span>';
+                                    Session::put('message', null);
+                                }
+                            @endphp
                             <div class="panel-body">
                                 <div class="position-center">
-                                    <form role="form">
+                                    <form role="form" action="{{URL::to('/luu-thong-tin-mon-hoc')}}" method="post">
+                                        {{csrf_field()}}
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Môn</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Môn học ">
+                                            <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Môn học ">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Lớp</label>
-                                            <select class="form-control m-bot15">
+                                            <select class="form-control m-bot15" name="class">
                                                 <option>Lớp 1</option>
                                                 <option>Lớp 2</option>
                                                 <option>Lớp 3</option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="btn btn-info">Thêm thông tin</button>
+                                        <button type="submit" name="luu_thong_tin_mon_hoc" class="btn btn-info">Lưu thông tin</button>
                                     </form>
                                 </div>
                             </div>

@@ -17,6 +17,13 @@
                             </div>
                         </div>
                     </div>
+{{--                    @php--}}
+{{--                        $message = Session::get('message');--}}
+{{--                        if($message){--}}
+{{--                            echo '<span class="text-alert">'.$message.'</span>';--}}
+{{--                            Session::put('message', null);--}}
+{{--                        }--}}
+{{--                    @endphp--}}
                     <div class="table-responsive">
                         <table class="table table-striped b-t b-light">
                             <thead>
