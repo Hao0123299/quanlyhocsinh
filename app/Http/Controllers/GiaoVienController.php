@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DB;
 use Session;
@@ -12,7 +14,9 @@ session_start();
 class GiaoVienController extends Controller
 {
     public function index(){
-        return view('giaoVien.danhSachGiaoVien');
+        $teacher = Teacher::all();
+        Return view('giaoVien.danhSachGiaoVien', ['teacher'=>$teacher]);
+//        return view('giaoVien.danhSachGiaoVien');
     }
     public function them_giao_vien(){
         return view('giaoVien.themGiaoVien');

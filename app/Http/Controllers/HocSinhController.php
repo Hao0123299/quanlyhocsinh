@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use DB;
 use Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+
 session_start();
 
 class HocSinhController extends Controller
 {
     public function index(){
-        DB::table('student')->get();
-
-        return view('hocSinh.danhSachHocSinh');
+        $student = Student::all();
+        Return view('hocSinh.danhSachHocSinh', ['student'=>$student]);
+//        DB::table('student')->get();
+//        return view('hocSinh.danhSachHocSinh');
     }
     public function them_hoc_sinh(){
         return view('hocSinh.themHocSinh');

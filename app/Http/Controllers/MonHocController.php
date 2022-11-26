@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use DB;
 use Session;
@@ -12,7 +13,9 @@ session_start();
 class MonHocController extends Controller
 {
     public function index(){
-        return view('monHoc.danhSachMonHoc');
+        $subjects = Subject::all();
+        Return view('monHoc.danhSachMonHoc', ['subjects'=>$subjects]);
+//        return view('monHoc.danhSachMonHoc');
     }
     public function them_mon_hoc(){
         return view('monHoc.themMonHoc');

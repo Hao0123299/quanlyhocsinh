@@ -17,13 +17,6 @@
                             </div>
                         </div>
                     </div>
-{{--                    @php--}}
-{{--                        $message = Session::get('message');--}}
-{{--                        if($message){--}}
-{{--                            echo '<span class="text-alert">'.$message.'</span>';--}}
-{{--                            Session::put('message', null);--}}
-{{--                        }--}}
-{{--                    @endphp--}}
                     <div class="table-responsive">
                         <table class="table table-striped b-t b-light">
                             <thead>
@@ -33,6 +26,7 @@
                                         <input type="checkbox"><i></i>
                                     </label>
                                 </th>
+                                <th>Mã số học sinh</th>
                                 <th>Họ và tên</th>
                                 <th>Lớp</th>
                                 <th>Môn học</th>
@@ -40,15 +34,22 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($student as $student)
                             <tr>
-                                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                                <td>Throwdown</td>
-                                <td>4c</td>
-                                <td>Jul 11, 2013</td>
-                                <td>
-                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                                </td>
+                                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                                    <td>{{$student->id}}</td>
+                                    <td>{{$student->name_student}}</td>
+                                    <td>{{$student->class}}</td>
+                                    <td>{{$student->subjects}}</td>
+                                    <td>
+                                        <a href="" class="active" ui-toggle-class="">
+                                            <button>Chi tiết</button>
+                                            <button>Xóa</button>
+                                            <button>Sửa</button>
+                                        </a>
+                                    </td>
                             </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

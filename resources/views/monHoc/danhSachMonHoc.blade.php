@@ -32,14 +32,20 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($subjects as $subjects)
                             <tr>
                                 <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                                <td>Throwdown</td>
-                                <td>4c</td>
+                                <td>{{$subjects->name}}</td>
+                                <td>{{$subjects->class}}</td>
                                 <td>
-                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                                    <a href="" class="active" ui-toggle-class="">
+                                        <button>Chi tiết</button>
+                                        <button>Xóa</button>
+                                        <button>Sửa</button>
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

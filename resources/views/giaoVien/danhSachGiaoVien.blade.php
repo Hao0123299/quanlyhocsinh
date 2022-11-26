@@ -27,21 +27,27 @@
                                     </label>
                                 </th>
                                 <th>Họ và tên</th>
-                                <th>Lớp</th>
-                                <th>Môn học</th>
+                                <th>Số điện thoại</th>
+                                <th>Tài khoản email</th>
                                 <th>Tùy chỉnh</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($teacher as $teacher)
                             <tr>
                                 <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                                <td>Throwdown</td>
-                                <td>4c</td>
-                                <td>Jul 11, 2013</td>
+                                <td>{{$teacher->name}}</td>
+                                <td>{{$teacher->phone}}</td>
+                                <td>{{$teacher->email}}</td>
                                 <td>
-                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                                    <a href="" class="active" ui-toggle-class="">
+                                        <button>Chi tiết</button>
+                                        <button>Xóa</button>
+                                        <button>Sửa</button>
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
